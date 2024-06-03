@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+#canvas{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 30px 10px blue;
+    border-radius: 50%;
+    transition-duration: 10ms;
+    transition-timing-function: linear;
+    animation-name: canvas;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+@keyframes canvas{
+    0%,100%{
+        box-shadow: 0 0 30px 30px blue;
+        overflow: auto;
+        width: 600px;
+        height: 600px;
+        /* transform: rotateX(0deg); */
+
+    }
+    50%{
+        box-shadow: 0 0 30px 10px red;
+        overflow: auto;
+        /* width: 650px;
+        height: 650px; */
+        /* transform: rotate(360deg); */
+        transform: translate(-90%,-50%) rotate(360deg);
+    }
+  
+}
